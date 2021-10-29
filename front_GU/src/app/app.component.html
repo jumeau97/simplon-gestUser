@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Alassane SANOGO</ion-list-header>
+          <ion-note>{{userEmail}}</ion-note>
+
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item  lines="none" detail="false" >
+              <ion-icon slot="start"></ion-icon>
+              <ion-label>MENU PRINCIPAL</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Liste</ion-list-header>
+
+          <ion-item  lines="none">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>liste des utilisateurs</ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Déconnexion</ion-list-header>
+
+          <ion-item  lines="none" (click)="logout()">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>Se déconnecter</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+  <!-- <ion-router-outlet id="main-content"></ion-router-outlet> -->
+</ion-app>
